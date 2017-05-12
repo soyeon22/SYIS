@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
 <%@ page import="java.util.*" %>
 <%
 	String kind = null;

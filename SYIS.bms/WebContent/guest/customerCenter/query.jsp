@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.query.domain.Query" %>
-<%@ page import="minsu.bms.query.service.QueryService" %>
-<%@ page import="minsu.bms.query.service.QueryServiceImpl" %>
+<%@ page import="syis.bms.query.domain.Query" %>
+<%@ page import="syis.bms.query.service.QueryService" %>
+<%@ page import="syis.bms.query.service.QueryServiceImpl" %>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="ko">

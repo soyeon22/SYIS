@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.purchase.domain.Purchase"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
-<%@ page import="minsu.bms.login.domain.User"%>
-<%@ page import="minsu.bms.basket.domain.Basket"%>
+<%@ page import="syis.bms.purchase.domain.Purchase"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.login.domain.User"%>
+<%@ page import="syis.bms.basket.domain.Basket"%>
 <%@ page import="java.util.*"%>
 <%@ page import="java.text.DecimalFormat"%>
 <%!String bookNum1;

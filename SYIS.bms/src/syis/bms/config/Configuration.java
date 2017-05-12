@@ -1,4 +1,4 @@
-package minsu.bms.config;
+package syis.bms.config;
 
 import java.io.Reader;
 

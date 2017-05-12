@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.purchase.domain.Purchase"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
-<%@ page import="minsu.bms.delivery.domain.Delivery"%>
+<%@ page import="syis.bms.purchase.domain.Purchase"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.delivery.domain.Delivery"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>

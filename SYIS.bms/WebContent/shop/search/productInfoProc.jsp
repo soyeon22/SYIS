@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.search.service.SearchService"%>
-<%@ page import="minsu.bms.search.service.SearchServiceImpl"%>
-<%@ page import="minsu.bms.search.domain.SearchResult"%>
-<%@ page import="minsu.bms.review.service.ReviewService"%>
-<%@ page import="minsu.bms.review.service.ReviewServiceImpl"%>
-<%@ page import="minsu.bms.review.domain.Review"%>
+<%@ page import="syis.bms.search.service.SearchService"%>
+<%@ page import="syis.bms.search.service.SearchServiceImpl"%>
+<%@ page import="syis.bms.search.domain.SearchResult"%>
+<%@ page import="syis.bms.review.service.ReviewService"%>
+<%@ page import="syis.bms.review.service.ReviewServiceImpl"%>
+<%@ page import="syis.bms.review.domain.Review"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 

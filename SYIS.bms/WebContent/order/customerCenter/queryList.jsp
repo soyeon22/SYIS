@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.query.domain.Query"%>
+<%@ page import="syis.bms.query.domain.Query"%>
 <%@ page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="minsu.bms.paging.domain.Page"%>
-<%@ page import="minsu.bms.paging.service.QueryPageService"%>
-<%@ page import="minsu.bms.paging.service.QueryPageServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.query.dao.mapper.QueryMapper"%>
-<%@ page import="minsu.bms.query.dao.QueryDao"%>
-<%@ page import="minsu.bms.query.dao.QueryDaoImpl"%>
-<%@ page import="minsu.bms.query.domain.Query"%>
-<%@ page import="minsu.bms.query.service.QueryService"%>
-<%@ page import="minsu.bms.query.service.QueryServiceImpl"%>
+<%@ page import="syis.bms.paging.domain.Page"%>
+<%@ page import="syis.bms.paging.service.QueryPageService"%>
+<%@ page import="syis.bms.paging.service.QueryPageServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.query.dao.mapper.QueryMapper"%>
+<%@ page import="syis.bms.query.dao.QueryDao"%>
+<%@ page import="syis.bms.query.dao.QueryDaoImpl"%>
+<%@ page import="syis.bms.query.domain.Query"%>
+<%@ page import="syis.bms.query.service.QueryService"%>
+<%@ page import="syis.bms.query.service.QueryServiceImpl"%>
 <%
 	Page myPage = null;
 	String currentPage = request.getParameter("currentPage");

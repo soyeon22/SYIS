@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.refund.service.RefundService"%>
-<%@ page import="minsu.bms.refund.service.RefundServiceImpl"%>
-<%@ page import="minsu.bms.refund.dao.RefundDao"%>
-<%@ page import="minsu.bms.refund.dao.RefundDaoImpl"%>
-<%@ page import="minsu.bms.refund.dao.mapper.RefundMapper"%>
-<%@ page import="minsu.bms.refund.domain.Refund"%>
-<%@ page import="minsu.bms.config.Configuration"%>
+<%@ page import="syis.bms.refund.service.RefundService"%>
+<%@ page import="syis.bms.refund.service.RefundServiceImpl"%>
+<%@ page import="syis.bms.refund.dao.RefundDao"%>
+<%@ page import="syis.bms.refund.dao.RefundDaoImpl"%>
+<%@ page import="syis.bms.refund.dao.mapper.RefundMapper"%>
+<%@ page import="syis.bms.refund.domain.Refund"%>
+<%@ page import="syis.bms.config.Configuration"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="minsu.bms.paging.domain.Page"%>
-<%@ page import="minsu.bms.paging.service.RefundPageService"%>
-<%@ page import="minsu.bms.paging.service.RefundPageServiceImpl"%>
+<%@ page import="syis.bms.paging.domain.Page"%>
+<%@ page import="syis.bms.paging.service.RefundPageService"%>
+<%@ page import="syis.bms.paging.service.RefundPageServiceImpl"%>
 <%@ page import="java.util.*" %>
 
 <!DOCTYPE html>

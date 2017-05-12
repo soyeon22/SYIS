@@ -1,27 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.refund.service.RefundService"%>
-<%@ page import="minsu.bms.refund.service.RefundServiceImpl"%>
-<%@ page import="minsu.bms.refund.dao.RefundDao"%>
-<%@ page import="minsu.bms.refund.dao.RefundDaoImpl"%>
-<%@ page import="minsu.bms.refund.dao.mapper.RefundMapper"%>
-<%@ page import="minsu.bms.refund.domain.Refund"%>
-<%@ page import="minsu.bms.config.Configuration"%>
+<%@ page import="syis.bms.refund.service.RefundService"%>
+<%@ page import="syis.bms.refund.service.RefundServiceImpl"%>
+<%@ page import="syis.bms.refund.dao.RefundDao"%>
+<%@ page import="syis.bms.refund.dao.RefundDaoImpl"%>
+<%@ page import="syis.bms.refund.dao.mapper.RefundMapper"%>
+<%@ page import="syis.bms.refund.domain.Refund"%>
+<%@ page import="syis.bms.config.Configuration"%>
 <%@ page import="java.util.*" %>
-<%@ page import="minsu.bms.purchase.service.PurchaseService"%>
-<%@ page import="minsu.bms.purchase.service.PurchaseServiceImpl"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDao"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDaoImpl"%>
-<%@ page import="minsu.bms.purchase.dao.mapper.PurchaseMapper"%>
-<%@ page import="minsu.bms.purchase.domain.Purchase"%>
-<%@ page import="minsu.bms.login.service.LoginService"%>
-<%@ page import="minsu.bms.login.service.LoginServiceImpl"%>
-<%@ page import="minsu.bms.login.service.PointService"%>
-<%@ page import="minsu.bms.login.service.PointServiceImpl"%>
-<%@ page import="minsu.bms.login.dao.LoginDao"%>
-<%@ page import="minsu.bms.login.dao.LoginDaoImpl"%>
-<%@ page import="minsu.bms.login.dao.mapper.LoginMapper"%>
-<%@ page import="minsu.bms.login.domain.User"%>
+<%@ page import="syis.bms.purchase.service.PurchaseService"%>
+<%@ page import="syis.bms.purchase.service.PurchaseServiceImpl"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDao"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDaoImpl"%>
+<%@ page import="syis.bms.purchase.dao.mapper.PurchaseMapper"%>
+<%@ page import="syis.bms.purchase.domain.Purchase"%>
+<%@ page import="syis.bms.login.service.LoginService"%>
+<%@ page import="syis.bms.login.service.LoginServiceImpl"%>
+<%@ page import="syis.bms.login.service.PointService"%>
+<%@ page import="syis.bms.login.service.PointServiceImpl"%>
+<%@ page import="syis.bms.login.dao.LoginDao"%>
+<%@ page import="syis.bms.login.dao.LoginDaoImpl"%>
+<%@ page import="syis.bms.login.dao.mapper.LoginMapper"%>
+<%@ page import="syis.bms.login.domain.User"%>
 
 <!DOCTYPE html>
 <%

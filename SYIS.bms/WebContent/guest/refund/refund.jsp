@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.purchase.service.PurchaseService"%>
-<%@ page import="minsu.bms.purchase.service.PurchaseServiceImpl"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDao"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDaoImpl"%>
-<%@ page import="minsu.bms.purchase.dao.mapper.PurchaseMapper"%>
-<%@ page import="minsu.bms.purchase.domain.Purchase"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookService"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookServiceImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDao"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDaoImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.mapper.BookMapper"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.purchase.service.PurchaseService"%>
+<%@ page import="syis.bms.purchase.service.PurchaseServiceImpl"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDao"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDaoImpl"%>
+<%@ page import="syis.bms.purchase.dao.mapper.PurchaseMapper"%>
+<%@ page import="syis.bms.purchase.domain.Purchase"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.bookmanagement.service.BookService"%>
+<%@ page import="syis.bms.bookmanagement.service.BookServiceImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDao"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDaoImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.mapper.BookMapper"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*" %>
 

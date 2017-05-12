@@ -2,16 +2,16 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="minsu.bms.paging.domain.Page"%>
-<%@ page import="minsu.bms.paging.service.UserPageService"%>
-<%@ page import="minsu.bms.paging.service.UserPageServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.login.dao.LoginDao"%>
-<%@ page import="minsu.bms.login.dao.LoginDaoImpl"%>
-<%@ page import="minsu.bms.login.dao.mapper.LoginMapper"%>
-<%@ page import="minsu.bms.login.domain.User"%>
-<%@ page import="minsu.bms.login.service.MemberService"%>
-<%@ page import="minsu.bms.login.service.MemberServiceImpl"%>
+<%@ page import="syis.bms.paging.domain.Page"%>
+<%@ page import="syis.bms.paging.service.UserPageService"%>
+<%@ page import="syis.bms.paging.service.UserPageServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.login.dao.LoginDao"%>
+<%@ page import="syis.bms.login.dao.LoginDaoImpl"%>
+<%@ page import="syis.bms.login.dao.mapper.LoginMapper"%>
+<%@ page import="syis.bms.login.domain.User"%>
+<%@ page import="syis.bms.login.service.MemberService"%>
+<%@ page import="syis.bms.login.service.MemberServiceImpl"%>
 <%
 	Page myPage = null;
 	String currentPage = request.getParameter("currentPage");

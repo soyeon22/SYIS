@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.basket.service.BasketService"%>
-<%@ page import="minsu.bms.basket.service.BasketServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.basket.dao.BasketDao"%>
-<%@ page import="minsu.bms.basket.dao.BasketDaoImpl"%>
-<%@ page import="minsu.bms.basket.dao.mapper.BasketMapper"%>
-<%@ page import="minsu.bms.basket.domain.Basket"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookService"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookServiceImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDao"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDaoImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.mapper.BookMapper"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.basket.service.BasketService"%>
+<%@ page import="syis.bms.basket.service.BasketServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.basket.dao.BasketDao"%>
+<%@ page import="syis.bms.basket.dao.BasketDaoImpl"%>
+<%@ page import="syis.bms.basket.dao.mapper.BasketMapper"%>
+<%@ page import="syis.bms.basket.domain.Basket"%>
+<%@ page import="syis.bms.bookmanagement.service.BookService"%>
+<%@ page import="syis.bms.bookmanagement.service.BookServiceImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDao"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDaoImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.mapper.BookMapper"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%

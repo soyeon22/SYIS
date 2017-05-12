@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.basket.service.BasketService"%>
-<%@ page import="minsu.bms.basket.service.BasketServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.basket.dao.BasketDao"%>
-<%@ page import="minsu.bms.basket.dao.BasketDaoImpl"%>
-<%@ page import="minsu.bms.basket.dao.mapper.BasketMapper"%>
-<%@ page import="minsu.bms.basket.domain.Basket"%>
+<%@ page import="syis.bms.basket.service.BasketService"%>
+<%@ page import="syis.bms.basket.service.BasketServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.basket.dao.BasketDao"%>
+<%@ page import="syis.bms.basket.dao.BasketDaoImpl"%>
+<%@ page import="syis.bms.basket.dao.mapper.BasketMapper"%>
+<%@ page import="syis.bms.basket.domain.Basket"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.login.service.SignUp" %>
-<%@ page import="minsu.bms.login.service.SignUpImpl" %>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.login.dao.LoginDao"%>
-<%@ page import="minsu.bms.login.dao.LoginDaoImpl"%>
-<%@ page import="minsu.bms.login.dao.mapper.LoginMapper"%>
-<%@ page import="minsu.bms.login.domain.User"%>
+<%@ page import="syis.bms.login.service.SignUp" %>
+<%@ page import="syis.bms.login.service.SignUpImpl" %>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.login.dao.LoginDao"%>
+<%@ page import="syis.bms.login.dao.LoginDaoImpl"%>
+<%@ page import="syis.bms.login.dao.mapper.LoginMapper"%>
+<%@ page import="syis.bms.login.domain.User"%>
 <%
 	LoginMapper loginMapper = Configuration.getMapper(LoginMapper.class);
 	LoginDao loginDao = new LoginDaoImpl(loginMapper);

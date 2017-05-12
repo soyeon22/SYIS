@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.login.domain.User"%>
+<%@ page import="syis.bms.login.domain.User"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="minsu.bms.bookmanagement.service.BookService"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDao"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDaoImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.mapper.BookMapper"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.bookmanagement.service.BookService"%>
+<%@ page import="syis.bms.bookmanagement.service.BookServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDao"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDaoImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.mapper.BookMapper"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ page import="minsu.bms.login.service.LoginService"%>
-<%@ page import="minsu.bms.login.service.LoginServiceImpl"%>
-<%@ page import="minsu.bms.login.dao.LoginDao"%>
-<%@ page import="minsu.bms.login.dao.LoginDaoImpl"%>
-<%@ page import="minsu.bms.login.dao.mapper.LoginMapper"%>
+<%@ page import="syis.bms.login.service.LoginService"%>
+<%@ page import="syis.bms.login.service.LoginServiceImpl"%>
+<%@ page import="syis.bms.login.dao.LoginDao"%>
+<%@ page import="syis.bms.login.dao.LoginDaoImpl"%>
+<%@ page import="syis.bms.login.dao.mapper.LoginMapper"%>
 <%@ page import="java.util.*" %>
 <!DOCTYPE html>
 <%

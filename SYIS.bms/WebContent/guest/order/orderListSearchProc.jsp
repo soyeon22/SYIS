@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.purchase.service.PurchaseService"%>
-<%@ page import="minsu.bms.purchase.service.PurchaseServiceImpl"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDao"%>
-<%@ page import="minsu.bms.purchase.dao.PurchaseDaoImpl"%>
-<%@ page import="minsu.bms.purchase.dao.mapper.PurchaseMapper"%>
-<%@ page import="minsu.bms.purchase.domain.Purchase"%>
-<%@ page import="minsu.bms.config.Configuration"%>
+<%@ page import="syis.bms.purchase.service.PurchaseService"%>
+<%@ page import="syis.bms.purchase.service.PurchaseServiceImpl"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDao"%>
+<%@ page import="syis.bms.purchase.dao.PurchaseDaoImpl"%>
+<%@ page import="syis.bms.purchase.dao.mapper.PurchaseMapper"%>
+<%@ page import="syis.bms.purchase.domain.Purchase"%>
+<%@ page import="syis.bms.config.Configuration"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.text.DecimalFormat" %>
 <%@ page import="java.text.SimpleDateFormat" %>

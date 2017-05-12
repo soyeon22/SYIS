@@ -1,16 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
-<%@ page import="minsu.bms.paging.domain.Page" %>
-<%@ page import="minsu.bms.paging.service.BookPageService" %>
-<%@ page import="minsu.bms.paging.service.BookPageServiceImpl" %>
-<%@ page import="minsu.bms.bookmanagement.service.BookService"%>
-<%@ page import="minsu.bms.bookmanagement.service.BookServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDao"%>
-<%@ page import="minsu.bms.bookmanagement.dao.BookDaoImpl"%>
-<%@ page import="minsu.bms.bookmanagement.dao.mapper.BookMapper"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.paging.domain.Page" %>
+<%@ page import="syis.bms.paging.service.BookPageService" %>
+<%@ page import="syis.bms.paging.service.BookPageServiceImpl" %>
+<%@ page import="syis.bms.bookmanagement.service.BookService"%>
+<%@ page import="syis.bms.bookmanagement.service.BookServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDao"%>
+<%@ page import="syis.bms.bookmanagement.dao.BookDaoImpl"%>
+<%@ page import="syis.bms.bookmanagement.dao.mapper.BookMapper"%>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <%

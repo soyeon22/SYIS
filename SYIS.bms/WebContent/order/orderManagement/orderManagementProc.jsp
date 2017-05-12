@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.orderManagement.service.OrderService"%>
-<%@ page import="minsu.bms.orderManagement.service.OrderServiceImpl"%>
-<%@ page import="minsu.bms.config.Configuration"%>
-<%@ page import="minsu.bms.orderManagement.dao.OrderDao"%>
-<%@ page import="minsu.bms.orderManagement.dao.OrderDaoImpl"%>
-<%@ page import="minsu.bms.orderManagement.dao.mapper.OrderMapper"%>
-<%@ page import="minsu.bms.orderManagement.domain.Order"%>
+<%@ page import="syis.bms.orderManagement.service.OrderService"%>
+<%@ page import="syis.bms.orderManagement.service.OrderServiceImpl"%>
+<%@ page import="syis.bms.config.Configuration"%>
+<%@ page import="syis.bms.orderManagement.dao.OrderDao"%>
+<%@ page import="syis.bms.orderManagement.dao.OrderDaoImpl"%>
+<%@ page import="syis.bms.orderManagement.dao.mapper.OrderMapper"%>
+<%@ page import="syis.bms.orderManagement.domain.Order"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html >
 <%

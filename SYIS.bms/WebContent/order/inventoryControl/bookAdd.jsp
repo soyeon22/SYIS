@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="minsu.bms.bookmanagement.domain.Book"%>
-<%@ page import="minsu.bms.writer.domain.Writer" %>
-<%@ page import="minsu.bms.writer.service.WriterService"%>
-<%@ page import="minsu.bms.writer.service.WriterServiceImpl"%>
+<%@ page import="syis.bms.bookmanagement.domain.Book"%>
+<%@ page import="syis.bms.writer.domain.Writer" %>
+<%@ page import="syis.bms.writer.service.WriterService"%>
+<%@ page import="syis.bms.writer.service.WriterServiceImpl"%>
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
