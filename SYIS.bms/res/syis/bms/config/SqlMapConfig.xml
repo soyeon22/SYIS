@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="syis/bms/config/jdbc.properties" />	
+	
+	<typeAliases>
+		<typeAlias alias="user" type="syis.bms.login.domain.User" />
+		<typeAlias alias="basket" type="syis.bms.basket.domain.Basket" />
+		<typeAlias alias="book" type="syis.bms.bookmanagement.domain.Book" />
+		<typeAlias alias="searchResult" type="syis.bms.search.domain.SearchResult"/>
+		<typeAlias alias="query" type="syis.bms.query.domain.Query"/>
+		<typeAlias alias="delivery" type="syis.bms.delivery.domain.Delivery"/>
+		<typeAlias alias="purchase" type="syis.bms.purchase.domain.Purchase"/>
+		<typeAlias alias="refund" type="syis.bms.refund.domain.Refund"/>
+		<typeAlias alias="order" type="syis.bms.orderManagement.domain.Order"/>
+		<typeAlias alias="page" type="syis.bms.paging.domain.Page" />
+		<typeAlias alias="review" type="syis.bms.review.domain.Review"/>
+		<typeAlias alias="writer" type="syis.bms.writer.domain.Writer"/>
+	</typeAliases>	
+		
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${JDBC.Driver}" />
+				<property name="url" value="${JDBC.ConnectionURL}" />
+				<property name="username" value="${JDBC.Username}" />
+				<property name="password" value="${JDBC.Password}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>		
+		<mapper resource="syis/bms/login/dao/mapper/LoginMapper.xml" />
+		<mapper resource="syis/bms/basket/dao/mapper/BasketMapper.xml" />
+		<mapper resource="syis/bms/bookmanagement/dao/mapper/BookMapper.xml" />
+		<mapper resource="syis/bms/search/dao/mapper/SearchMapper.xml" />
+		<mapper resource="syis/bms/query/dao/mapper/QueryMapper.xml" />
+		<mapper resource="syis/bms/delivery/dao/mapper/DeliveryMapper.xml" />
+		<mapper resource="syis/bms/purchase/dao/mapper/PurchaseMapper.xml" />
+		<mapper resource="syis/bms/refund/dao/mapper/RefundMapper.xml" />
+		<mapper resource="syis/bms/orderManagement/dao/mapper/OrderMapper.xml" />
+		<mapper resource="syis/bms/paging/dao/mapper/PageMapper.xml" />
+		<mapper resource="syis/bms/review/dao/mapper/ReviewMapper.xml" />
+		<mapper resource="syis/bms/writer/dao/mapper/WriterMapper.xml" />
+	</mappers>
+</configuration>

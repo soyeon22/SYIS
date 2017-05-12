@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.review.dao.mapper.ReviewMapper">
+	<select id="getReviews" parameterType="string" resultType="review">
+		select user_id userId, book_code bookCode, review_content reviewContent, creation_date creationDate, gpa
+		from reviews
+		where book_code=#{bookCode}
+		order by creation_date
+	</select>
+</mapper>

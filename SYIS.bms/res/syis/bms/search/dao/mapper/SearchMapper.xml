@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.search.dao.mapper.SearchMapper">
+	<select id="salesNum" parameterType="string" resultType="searchResult">
+		select img, book_code bookCode, book_name bookName, book_price bookPrice, writer, company, publi_date publiDate, country, kind, sales_num salesNum
+		from books
+		<if test="searchOption.equals('bookTitle')">
+			where book_name like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('writer')">
+			where writer like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('company')">
+			where company like '%'||#{searchText}||'%'
+		</if>
+		order by salesNum desc
+	</select>
+	
+	<select id="reviewCnt" parameterType="string" resultType="searchResult">
+		select a.img img, a.book_code bookCode, a.book_name bookName, a.book_price bookPrice, a.writer writer,
+			   a.company company, a.publi_date publiDate, a.country country, a.kind kind, a.sales_num salesNum,
+			   NVL(b.reviewCnt,0) as reviewCnt
+		from books a left join (select count(book_code) as reviewCnt, book_code
+               					from reviews
+            					group by book_code) b
+		on a.book_code = b.book_code
+		<if test="searchOption.equals('bookTitle')">
+			where book_name like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('writer')">
+			where writer like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('company')">
+			where company like '%'||#{searchText}||'%'
+		</if>
+		order by reviewCnt desc
+	</select>
+	
+	<select id="publiDate" parameterType="string" resultType="searchResult">
+		select img, book_code bookCode, book_name bookName, book_price bookPrice, writer, company, publi_date publiDate, country, kind, sales_num salesNum
+		from books
+		<if test="searchOption.equals('bookTitle')">
+			where book_name like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('writer')">
+			where writer like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('company')">
+			where company like '%'||#{searchText}||'%'
+		</if>
+		order by publiDate desc
+	</select>
+	
+	<select id="highPrice" parameterType="string" resultType="searchResult">
+		select img, book_code bookCode, book_name bookName, book_price bookPrice, writer, company, publi_date publiDate, country, kind, sales_num salesNum
+		from books
+		<if test="searchOption.equals('bookTitle')">
+			where book_name like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('writer')">
+			where writer like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('company')">
+			where company like '%'||#{searchText}||'%'
+		</if>
+		order by bookPrice desc
+	</select>
+	
+	<select id="lowPrice" parameterType="string" resultType="searchResult">
+		select img, book_code bookCode, book_name bookName, book_price bookPrice, writer, company, publi_date publiDate, country, kind, sales_num salesNum
+		from books
+		<if test="searchOption.equals('bookTitle')">
+			where book_name like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('writer')">
+			where writer like '%'||#{searchText}||'%'
+		</if>
+		<if test="searchOption.equals('company')">
+			where company like '%'||#{searchText}||'%'
+		</if>
+		order by bookPrice
+	</select>
+	
+	<select id="getBook" parameterType="string" resultType="searchResult">
+		select  a.img img, a.book_code bookCode, a.book_name bookName, a.book_price bookPrice, a.book_intro bookIntro, 
+			   a.writer writer, b.writer_intro writerIntro, a.company company, 
+			   a.publi_date publiDate, a.company_eval companyEval
+		from books a join writers b
+		on a.writer=b.writer_name
+		where a.book_code=#{bookCode}
+	</select>
+</mapper>

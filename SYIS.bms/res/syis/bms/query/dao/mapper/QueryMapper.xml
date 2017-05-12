@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.query.dao.mapper.QueryMapper">
+	<select id="queryList" parameterType="page" resultMap="queryMap">
+		<![CDATA[
+		select * from (
+			select rownum as rnum, x.* from(
+				select * from boards
+				order by board_num desc
+			)x where rownum <= #{rowCnt}*#{currentPage}
+		) where rnum > 10*(#{currentPage}-1)
+		]]>
+	</select>
+	
+	<resultMap id="queryMap" type="query">
+		<id property="boardNum"		column="board_num"/>
+		<result property="separation"	column="separation"/>
+		<result property="userId"	column="user_id"/>
+		<result property="title"	column="title"/>
+		<result property="content"	column="content"/>
+		<result property="answerState"	column="answer_state"/>
+		<result property="reportingDate"	column="reporting_date"/>
+	</resultMap>
+		
+	
+	<select id="getQueryNum" parameterType="int" resultType="query">
+		select board_num boardNum, user_id userId, title, content, answer, separation, answer_state answerState, reporting_date reportingDate
+		from boards
+		where board_num = #{boardNum}
+	</select>
+	
+	<select id="getQueryId" parameterType="string" resultType="query">
+		select board_num boardNum, user_id userId, title, content, answer, separation, answer_state answerState, reporting_date reportingDate
+		from boards
+		where user_id = #{userId}
+		order by board_num
+	</select>
+	
+	<update id="updateQueryAnswer" parameterType="query">
+		update boards set
+		answer = #{answer},
+		answer_state=#{answerState}
+		where board_num = #{boardNum}
+	</update>
+
+	<update id="updateQuery" parameterType="query">
+		update boards set
+		title = #{title},
+		content=#{content}
+		where board_num = #{boardNum}
+	</update>
+	
+	<delete id="delQuery" parameterType="int">
+		delete boards where board_num = #{boardNum}
+	</delete>
+	
+	<insert id="addQuery" parameterType="query">
+		insert into boards values (
+		boardnum_seq.nextval, #{userId}, #{title}, #{content}, #{answer,jdbcType=VARCHAR},
+		#{separation},'답변전', sysdate)
+	</insert>
+</mapper>

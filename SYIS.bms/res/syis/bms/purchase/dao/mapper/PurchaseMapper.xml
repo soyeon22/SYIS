@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.purchase.dao.mapper.PurchaseMapper">
+	<select id="purchaseList" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		order by order_num
+	</select>
+	
+	<select id="getPurchase" parameterType="int" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		where order_num = #{orderNum}
+	</select>
+	<select id="getPurchaseId" parameterType="string" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		where user_id = #{userId}
+		order by order_date desc
+	</select>
+	
+	<select id="getPurchasePage" parameterType="page" resultMap="purchaseMap">
+		<![CDATA[
+		select * from (
+			select rownum as rnum, x.* from(
+				select * from orders
+				order by order_num desc
+			)x where rownum <= #{rowCnt}*#{currentPage}
+		) where rnum > 10*(#{currentPage}-1)
+		]]>
+	</select>
+	
+	<resultMap id="purchaseMap" type="purchase">
+		<id property="orderNum"				column="order_num" />
+		<result property="deliveryNum"		column="delivery_num" />
+		<result property="refundNum"		column="refund_num" />
+		<result property="userId"			column="user_id" />
+		<result property="bookCode"			column="book_code" />
+		<result property="orderDate"		column="order_date" />
+		<result property="destination"		column="destination" />
+		<result property="orderCount"		column="order_count" />
+		<result property="payOption"		column="pay_option" />
+		<result property="payAmount"		column="pay_amount" />
+		<result property="deliveryPrice"	column="delivery_price" />
+	</resultMap>
+	
+	
+	<select id="getPurchaseSearch" parameterType="string" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		where order_date between #{date1} and #{date2}
+		order by order_date Desc
+	</select>
+	<select id="getPurchaseList" parameterType="int" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		where order_num = #{orderNum}
+	</select>
+	<select id="getPurchaseBook" parameterType="string" resultType="purchase">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount, pay_option payOption, pay_amount payAmount, delivery_price deliveryPrice
+		from orders
+		where book_code = #{bookCode}
+	</select>
+	
+	
+	<delete id="delPurchase" parameterType="int">
+		delete orders where order_num = #{orderNum}
+	</delete>
+	
+	<insert id="addPurchase" parameterType="purchase">
+		insert into orders values (
+		ordernum_seq.nextval, deliverynum_seq.nextval, #{refundNum,jdbcType=NUMERIC}, #{userId}, #{bookCode}, to_char(sysdate,'yyyy"-"mm"-"dd'), #{destination}, #{orderCount}, #{payOption}, #{payAmount}, #{deliveryPrice,jdbcType=NUMERIC})
+	</insert>
+	
+	<update id="updatePurchase" parameterType="purchase">
+		update orders set
+		book_code=#{bookCode}, destination=#{destination}, order_count=#{orderCount}, pay_option=#{payOption}, pay_amount=#{payAmount}
+		where order_num=#{orderNum}
+	</update>
+	<update id="updateRefund" parameterType="purchase">
+		update orders set
+		refund_num=#{refundNum}
+		where order_num=#{orderNum}
+	</update>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT"> <!-- 콘솔에 출력 -->
+			<PatternLayout />	<!-- 디폴트 타입으로 쓰겠다 -->
+		</Console>		
+		<RollingFile name="file" fileName="c:/DEV/jspLog.log"
+			filePattern="c:/DEV/jspLog.%d{yyyy-MM-dd-HH-mm-ss}.log"	
+			append="true">
+			<PatternLayout pattern="[%-5p: %d{yyyy/MM/dd HH:mm:ss}] %m%n" />
+			<Policies>				
+				<TimeBasedTriggeringPolicy interval="86400"/> <!-- 24시간 단위로 새로운 파일 생성 -->
+			</Policies>
+		</RollingFile>
+	</Appenders>
+
+	<!-- FATAL, ERROR, WARN, INFO, DEBUG, TRACE -->
+	<Loggers>		
+		<Root level="DEBUG">
+			<AppenderRef ref="console" />	<!-- 에러메세지 콘솔로 출력 -->
+			<AppenderRef ref="file" />		<!-- 에러메세지 파일에 출력 -->			
+		</Root>
+	</Loggers>
+</Configuration>
