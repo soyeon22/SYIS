@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.login.dao.mapper.LoginMapper">
+	<select id="getUser" parameterType ="string" resultType="user"> <!-- 아이디값과 일치하는 데이터를 찾으면 user객체로 맵핑해서 리턴 -->
+		select user_id userId, password, name, age, gender, my_num myNum,
+		email, phone_num phoneNum, address, point
+		from users
+		where user_id = #{id}
+	</select>
+	
+	<select id="userListPage" parameterType="page" resultMap="userMap">
+		<![CDATA[
+		select * from (
+			select rownum as rnum, x.* from(
+				select * from users
+				order by name
+			)x where rownum <= #{rowCnt}*#{currentPage}
+		) where rnum > 10*(#{currentPage}-1)
+		]]>
+	</select>
+	
+	<resultMap id="userMap" type="user">
+		<id property="userId"		column="user_id"/>
+		<result property="password"	column="password"/>
+		<result property="name"		column="name"/>
+		<result property="age"		column="age"/>
+		<result property="gender"	column="gender"/>
+		<result property="myNum"	column="my_num"/>
+		<result property="email"	column="email"/>
+		<result property="phoneNum"	column="phone_num"/>
+		<result property="address"	column="address"/>
+		<result property="point"	column="point"/>
+	</resultMap>
+	
+	
+	<select id="getUserId" parameterType ="string" resultType="user"> 
+		select user_id userId, password, name, age, gender, my_num myNum,
+		email, phone_num phoneNum, address, point
+		from users
+		where name = #{name}
+		and my_num = #{myNum}
+	</select>
+	
+	<select id="getUserPw" parameterType ="string" resultType="user"> <!-- 아이디값과 일치하는 데이터를 찾으면 user객체로 맵핑해서 리턴 -->
+		select user_id userId, password, name, age, gender, my_num myNum,
+		email, phone_num phoneNum, address, point
+		from users
+		where user_id = #{userId}
+		and name = #{name}
+		and my_num = #{myNum}
+		
+	</select>
+	
+	<select id="userList" resultType="user">
+		select user_id userId,password, name, age, gender, my_num myNum,
+		email, phone_num phoneNum, address, point
+		from users
+	</select>
+	
+	<insert id="addUser" parameterType="user">
+		insert into users values(
+		#{userId}, #{password}, #{name}, #{age}, #{gender}, #{myNum},
+		#{email}, #{phoneNum}, #{address},0
+		)
+	</insert>
+	
+	<update id="updateUser" parameterType="user">
+		update users set
+		user_id=#{userId}, password=#{password}, name=#{name},age=#{age},
+		gender=#{gender},my_num=#{myNum},email=#{email},phone_num=#{phoneNum},
+		address=#{address}
+		where user_id=#{userId}
+	</update>
+	<update id="updatePoint" parameterType="user">
+		update users set
+		point=#{point}
+		where user_id=#{userId}
+	</update>
+	
+	<delete id="delUser" parameterType="user">
+		delete users where user_id = #{userId}
+	</delete>
+</mapper>

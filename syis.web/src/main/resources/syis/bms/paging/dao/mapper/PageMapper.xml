@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.paging.dao.mapper.PageMapper">
+	<select id="getTotRowCntBook" resultType="int">
+		select count(book_code) from books
+	</select>
+	<select id="getTotRowCntQuery1" resultType="int">
+		select count(board_num) from boards
+		where boards.user_id = #{userId}		
+	</select>
+	<select id="getTotRowCntQuery" resultType="int">
+		select count(board_num) from boards	
+	</select>
+	<select id="getTotRowCntUser" resultType="int">
+		select count(user_id) from users
+	</select>
+	<select id="getTotRowCntRefund" resultType="int">
+		select count(refund_num) from refund_state
+	</select>
+	<select id="getTotRowCntOrder" resultType="int">
+		select count(order_num) from orders
+	</select>
+</mapper>

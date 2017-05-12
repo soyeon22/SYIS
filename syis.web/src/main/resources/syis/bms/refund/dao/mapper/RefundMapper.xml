@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.refund.dao.mapper.RefundMapper">
+	<select id="refundList" parameterType="string" resultType="refund">
+		select refund_num refundNum, refund_now refundNow, refund_reason refundReason, cancel_type cancelType, refund_date refundDate, refund_amount refundAmount, book_name bookName, order_num orderNum, user_id userId
+		from refund_state
+		where user_id =#{userId}
+	</select>
+	
+	<select id="refundListPage" parameterType="page" resultMap="refundMap">
+		<![CDATA[
+		select * from (
+			select rownum as rnum, x.* from(
+				select * from refund_state
+				order by refund_num desc
+			)x where rownum <= #{rowCnt}*#{currentPage}
+		) where rnum > 10*(#{currentPage}-1)
+		]]>
+	</select>
+	
+	<resultMap id="refundMap" type="refund">
+		<id property="refundNum"		column="refund_num" />
+		<result property="refundNow"	column="refund_now" />
+		<result property="refundReason"	column="refund_reason" />
+		<result property="cancelType"	column="cancel_type" />
+		<result property="refundAmount"	column="refund_amount" />
+		<result property="refundDate"	column="refund_date" />
+		<result property="bookName"		column="book_name" />
+		<result property="orderNum"		column="order_num" />
+		<result property="userId"		column="user_id" />
+	</resultMap>
+	
+	<select id="getRefund" parameterType="int" resultType="refund">
+		select refund_num refundNum, refund_now refundNow, refund_reason refundReason, cancel_type cancelType, refund_date refundDate, refund_amount refundAmount, book_name bookName, order_num orderNum, user_id userId
+		from refund_state
+		where order_num = #{orderNum}
+	</select>
+	
+	<delete id="delRefund" parameterType="int">
+		delete refund_state where refund_num = #{refundNum}
+	</delete>
+	
+	<insert id="addRefund" parameterType="refund">
+		insert into refund_state values (
+		refundnum_seq.nextval, '환불완료', #{refundReason}, #{cancelType}, to_char(sysdate,'yyyy"-"mm"-"dd'), #{refundAmount}, #{bookName}, #{orderNum}, #{userId})
+	</insert>
+	
+	<update id="updateRefund" parameterType="refund">
+		update refund_state set
+		refund_now=#{refundNow}
+		where refund_num=#{refundNum}
+	</update>
+</mapper>

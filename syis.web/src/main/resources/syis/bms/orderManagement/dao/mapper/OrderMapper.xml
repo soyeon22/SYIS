@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="minsu.bms.orderManagement.dao.mapper.OrderMapper">
+	
+	<select id="orderList" resultType="order">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount,
+		pay_option payOption, pay_amount payAmount
+		from orders order by order_date
+	</select>
+
+	<select id="searchDates" parameterType="string" resultType="order">
+		select order_num orderNum, delivery_num deliveryNum, refund_num refundNum, user_id userId, book_code bookCode, order_date orderDate, destination, order_count orderCount,
+		pay_option payOption, pay_amount payAmount
+		from orders 
+		where order_Date between #{registrationDate1} and #{registrationDate2}
+		order by order_date
+	</select>
+</mapper>

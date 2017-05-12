@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="minsu.bms.basket.dao.mapper.BasketMapper">
+	<select id="getBaskets" parameterType ="string" resultType="basket"> <!-- 아이디값과 일치하는 데이터를 찾으면 user객체로 맵핑해서 리턴 -->
+		select basket_num basketNum, user_id userId, book_code bookCode, 
+			   book_name bookName, book_price bookPrice, book_count bookCount
+		from baskets
+		where user_id = #{userId}
+	</select>
+	
+	<select id="getBasket" parameterType="int" resultType="basket">
+		select basket_num basketNum, user_id userId, book_code bookCode, 
+			   book_name bookName, book_price bookPrice, book_count bookCount
+		from baskets
+		where basket_num = #{basketNum}
+	</select>
+	
+	<delete id="delBasket" parameterType="int">
+		delete baskets where basket_num = #{basketNum}
+	</delete>
+	
+	<insert id="addBasket" parameterType="basket">
+		insert into baskets values(
+		basketnum_seq.nextval, #{userId}, #{bookCode}, #{bookName}, #{bookPrice}, #{bookCount})
+	</insert>
+	
+	<update id="updateBasket" parameterType="basket">
+		update baskets set
+		book_count = #{bookCount}
+		where basket_num=#{basketNum}
+	</update>
+
+</mapper>
