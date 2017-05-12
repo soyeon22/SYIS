@@ -12,7 +12,7 @@
 				<TimeBasedTriggeringPolicy interval="86400"/>
 			</Policies>
 		</RollingFile>
-	</Appenders>
+	</Appenders> 
 
 	<!-- FATAL, ERROR, WARN, INFO, DEBUG, TRACE -->
 	<Loggers>		
