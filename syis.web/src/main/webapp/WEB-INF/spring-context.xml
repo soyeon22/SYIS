@@ -58,7 +58,7 @@
  				<list>
  					<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
  					
- 				</list>
+ 				</list> 
  			</property>
  		</bean>
 </beans>
