@@ -9,7 +9,7 @@
 <%@ page import="syis.bms.bookmanagement.dao.BookDaoImpl"%>
 <%@ page import="syis.bms.bookmanagement.dao.mapper.BookMapper"%>
 <%@ page import="syis.bms.bookmanagement.domain.Book"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="syis.bms.login.service.LoginService"%>
 <%@ page import="syis.bms.login.service.LoginServiceImpl"%>
 <%@ page import="syis.bms.login.dao.LoginDao"%>
