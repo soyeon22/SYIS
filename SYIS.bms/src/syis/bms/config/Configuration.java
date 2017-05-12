@@ -1,4 +1,4 @@
-package syis.bms.config;
+package minsu.bms.config;
 
 import java.io.Reader;
 
@@ -12,7 +12,7 @@ public class Configuration {
    
    static {
 	   try {
-		   Reader reader = Resources.getResourceAsReader("minsu/bms/config/SqlMapConfig.xml");
+		   Reader reader = Resources.getResourceAsReader("syis/bms/config/SqlMapConfig.xml");
 		   SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
 		   sqlSession = sqlSessionFactory.openSession(true);
 		   reader.close();
